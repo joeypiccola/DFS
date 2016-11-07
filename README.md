@@ -16,7 +16,7 @@ File Namespace_directory
     Type            = 'Directory'
 }
 
-xSMBShare Namespace_DFSShare
+xSMBShare Namespace_share
 {
     Name       = 'Files'
     FullAccess = 'ad\domain admins'
@@ -27,10 +27,10 @@ xSMBShare Namespace_DFSShare
 
 xDFSNamespaceRoot Namespace_root
 {
-    Path                 = '\\ad.piccola.us\Files'
-    TargetPath           = "\\dfs01.ad.piccola.us\Files"
-    Ensure               = 'present'
-    Type                 = 'DomainV2'
+    Path       = '\\ad.piccola.us\Files'
+    TargetPath = "\\dfs01.ad.piccola.us\Files"
+    Type       = 'DomainV2'
+    Ensure     = 'present'
 }
 ```
 
