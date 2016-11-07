@@ -50,3 +50,6 @@ xDFSNamespaceRoot Namespace_root
 4. initiate a 'Set-DscLocalConfigurationManager -Path .\meta.mofs\ -Verbose -Force' (tells dfs04, this is how you get your configuration)
 5. initiate an 'Update-DscConfiguration -wait -Verbose -ComputerName dfs04' (we can use update and no invoke bc no config exists yet)
 6. be patient and check dfsmgmt.msc
+
+### Source control
+Lets talk about source control.
