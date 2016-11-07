@@ -1,9 +1,38 @@
 # DFSConfig
 
-A demo DSC configuration for managing DFS with the XDFS resource.
+A demo DSC configuration for managing DFS with the xDFS resource.
 
 ## DSC
-DSC provides a set of Windows PowerShell language extensions, new Windows PowerShell cmdlets, and resources that you can use to declaratively specify how you want your system to be configured.
+DSC provides a set of Windows PowerShell language extensions, new Windows PowerShell cmdlets, and resources that you can use to declaratively specify how you want your system to be configured. DSC works by defining configurations that are either pushed or pulled to endpoints. These configurations are natively applied to the system.  
+
+### Declarative what?
+DSC works by building declarative configuration files. These configuration files declare the desired configuration and do not actually list how to do it.
+
+```PowerShell
+File Namespace_directory
+{
+    Ensure          = 'Present'
+    DestinationPath = 'c:\dfsroots\files'
+    Type            = 'Directory'
+}
+
+xSMBShare Namespace_DFSShare
+{
+    Name       = 'Files'
+    FullAccess = 'ad\domain admins'
+    ReadAccess = 'Everyone'
+    Path       = 'C:\DFSRoots\Files'
+    Ensure     = 'Present'
+}
+
+xDFSNamespaceRoot Namespace_root
+{
+    Path                 = '\\ad.piccola.us\Files'
+    TargetPath           = "\\dfs01.ad.piccola.us\Files"
+    Ensure               = 'present'
+    Type                 = 'DomainV2'
+}
+```
 
 ## Demo
 
