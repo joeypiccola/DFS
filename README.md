@@ -3,18 +3,17 @@
 A demo DSC configuration for managing DFS with the XDFS resource.
 
 ## DSC
-
-
+DSC provides a set of Windows PowerShell language extensions, new Windows PowerShell cmdlets, and resources that you can use to declaratively specify how you want your system to be configured.
 
 ## Demo
 
-### "Uh-oh"
+### Uh-oh
 
 1. go and delete the entire File domain-based namespace
 2. initiate an 'Update-DSCConfiguration -ComputerName dfs01' on our DFS server
 3. be patient
 
-### 'Create a new namespace server for the Offices and Files namespace"
+### Create a new namespace server for the Offices and Files namespace
 
 1. add dfs04 to our configuration data
 2. publish our updated configuration (this generates our mofs)
