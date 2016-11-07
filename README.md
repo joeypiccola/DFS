@@ -28,7 +28,7 @@ xSMBShare Namespace_share
 xDFSNamespaceRoot Namespace_root
 {
     Path       = '\\ad.piccola.us\Files'
-    TargetPath = "\\dfs01.ad.piccola.us\Files"
+    TargetPath = '\\dfs01.ad.piccola.us\Files'
     Type       = 'DomainV2'
     Ensure     = 'present'
 }
