@@ -3,10 +3,13 @@
 A demo DSC configuration for managing DFS with the xDFS resource.
 
 ## DSC
-DSC provides a set of Windows PowerShell language extensions, new Windows PowerShell cmdlets, and resources that you can use to declaratively specify how you want your system to be configured. DSC works by defining configurations that are either pushed or pulled to endpoints. These configurations are natively applied to the system.  
+> DSC is a new management platform in Windows PowerShell that enables deploying and managing configuration data for software services and managing the environment in which these services run.
+> DSC provides a set of Windows PowerShell language extensions, new Windows PowerShell cmdlets, and resources that you can use to declaratively specify how you want your software environment to be configured.
+
+DSC works by defining configurations that are either pushed or pulled to endpoints. These configurations are natively applied to systems. DSC is intended to be a platform for configuration management, IT IS NOT AN END TO END SOLUTION. Tooling, standards, and processes must be used.
 
 ### Declarative what?
-DSC works by building declarative configuration files. These configuration files declare the desired configuration and do not actually list how to do it.
+DSC works by building declarative configuration files. These configuration files describe the configuration and do not actually contain the code to execute the configuration.
 
 ```PowerShell
 File Namespace_directory
