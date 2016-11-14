@@ -21,6 +21,13 @@
             Thumbprint           = 'D41C581A53F35CF1CB30A6C91BFB8B28F5B747F0'
             PSDscAllowDomainUser = $true
         }
+        @{
+            Nodename             = 'dfs04'
+            NameSpacestoHost     = 'Files','Regions','Offices'
+            CertificateFile      = "C:\DSC\configs\dfs\certs\dfsconfig.cer"
+            Thumbprint           = 'D41C581A53F35CF1CB30A6C91BFB8B28F5B747F0'
+            PSDscAllowDomainUser = $true
+        }
     )
 
     BaseSettings = @{
