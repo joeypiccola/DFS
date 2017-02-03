@@ -23,7 +23,7 @@
         {
             Ensure          = 'Present'
             DestinationPath = 'c:\dfsroots'
-            Type            = 'Directory'
+            Type            = 'directory'
         }
 
         xDFSNamespaceServerConfiguration NamespaceConfig
